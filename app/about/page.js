@@ -15,7 +15,7 @@ export default function About() {
                     Welcome to Sobit Service Centre Pvt. Ltd., a company driven by the vision of empowering rural communities with accessible, high-quality services. We believe that everyone deserves access to essential services that can improve their quality of life, irrespective of where they live. Through our unique franchise model, we aim to bridge the gap between urban conveniences and rural realities, bringing a diverse range of offerings directly to villages across the country.
                 </p>
                 <p className="text-lg my-4">
-                    From telecommunications and financial services to e-commerce, healthcare, and education, our offerings span multiple sectors that are critical to the socio-economic advancement of rural areas. Each service center is designed to be a hub of activity, providing villagers with easy access to resources and opportunities that were once out of reach. Whether it's enabling digital literacy, facilitating online shopping, or supporting small-scale agriculture, our services are crafted to meet the real needs of rural India.
+                    {"From telecommunications and financial services to e-commerce, healthcare, and education, our offerings span multiple sectors that are critical to the socio-economic advancement of rural areas. Each service center is designed to be a hub of activity, providing villagers with easy access to resources and opportunities that were once out of reach. Whether it's enabling digital literacy, facilitating online shopping, or supporting small-scale agriculture, our services are crafted to meet the real needs of rural India."}
 
 
                 </p>

@@ -40,7 +40,7 @@ const page = () => {
               </span>
             </h1>
             <p className="mt-8 text-pretty text-md font-medium text-gray-500 sm:text-xl/8">
-              We are solving INDIA'S biggest problem
+            {"  We are solving INDIA'S biggest problem"}
               <br />
               Unemployement
               <br />
