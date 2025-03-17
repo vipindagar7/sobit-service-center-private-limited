@@ -44,7 +44,11 @@ Welcome to the official portfolio repository for **SOBIT Service Center Private 
 
 Clone this repository to explore the different projects developed for SOBIT Service Center.
 
-```bash
-git clone https://github.com/vipindagar7/sobit-service-center-portfolio.git
-cd sobit-service-center-portfolio
-```
+git clone https://github.com/vipindagar7/sobit-service-center-private-limited.git
+create .env file
+add the following variables
+EMAIL_USER=`<email>`
+EMAIL_PASS=`<generated app password>`
+TARGET_EMAIL=`<mail where you want to receive all messages from user>`
+
+cd sobit-service-center-private-limited
