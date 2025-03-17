@@ -1,103 +1,99 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { FlickeringGrid } from "../components/magicui/flickering-grid";
+import { SparklesText } from "../components/magicui/sparkles-text";
+import { ShineBorder } from "../components/magicui/shine-border";
+import { AnimatedGradientText } from "../components/magicui/animated-gradient-text";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Features } from "./components/Features";
+import { Services } from "./components/Services";
+import { Contact } from "./components/Contact";
+
+
+
+const page = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="">
+      <div className="">
+        <div className="fixed left-1/2 transform -translate-x-1/2 -z-10">
+          <FlickeringGrid
+            className="relative inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+            squareSize={4}
+            gridGap={6}
+            color="#60A5FA"
+            maxOpacity={0.5}
+            flickerChance={0.5}
+            height={1000}
+            width={1000}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 z-100">
+          <div className="text-center">
+            <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              Establish a multi-service business in the comfort of your home with
+              <br />
+              <span className='text-indigo-600 text-5xl'>
+                <SparklesText text="SOBIT" />
+
+              </span>
+            </h1>
+            <p className="mt-8 text-pretty text-md font-medium text-gray-500 sm:text-xl/8">
+              We are solving INDIA'S biggest problem
+              <br />
+              Unemployement
+              <br />
+              Through our multiple services store frenchise network
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link href="/#contact" className="text-sm/6 font-semibold">
+                <Button>
+                  Get Started
+                </Button>
+              </Link>
+              <Link href="/about" className="text-sm/6 font-semibold">
+                Learn more <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="">
+        <h2 className="text-center text-3xl font-semibold tracking-tight sm:text-4xl">
+          Everything you need to start your business at home</h2>
+
+        <div className="text-lg font-bold text-center p-4">
+          <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+          <AnimatedGradientText >
+            We have solution
+          </AnimatedGradientText>
+        </div>
+        <div className="features">
+          <Features />
+        </div>
+
+        <div className="services flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl m-4 text-indigo-800 font-bold text-center">
+            Services
+          </h1>
+          <div className="w-full max-w-[400px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px]">
+            <Services />
+          </div>
+          <Link href="/services" className="text-lg font-semibold p-4">
+            View all services <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+
+        <div id="contact" className="flex flex-col items-center justify-center w-full p-4">
+          <Contact />
+        </div>
+
+      </div>
+
+    </main>
+  )
 }
+
+export default page
