@@ -1,6 +1,4 @@
 import { BentoCard, BentoGrid } from "../../components/magicui/bento-grid";
-import Image from "next/image";
-
 import { WifiIcon, HomeIcon, CreditCardIcon, ShoppingCartIcon, BriefcaseIcon } from "lucide-react";
 
 const features = [
@@ -10,7 +8,8 @@ const features = [
         description: "Get fast internet, effortless online bill payments, and expert-led digital literacy programs to stay ahead in the digital era.",
         href: "/services",
         cta: "Explore Now",
-        className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
+        className: "col-span-1 row-span-1 ",
+
     },
     {
         Icon: HomeIcon,
@@ -18,8 +17,8 @@ const features = [
         description: "Discover top-tier property buying, selling, and rental services to find a place you truly call home.",
         href: "/services",
         cta: "View Listings",
+        className: "col-span-1 row-span-1",
 
-        className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
     },
     {
         Icon: CreditCardIcon,
@@ -27,8 +26,8 @@ const features = [
         description: "From banking and insurance to secure money transfers—empower your financial future with ease.",
         href: "/services",
         cta: "Get Started",
+        className: "col-span-1 row-span-1",
 
-        className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
     },
     {
         Icon: ShoppingCartIcon,
@@ -36,7 +35,7 @@ const features = [
         description: "Access a wide range of high-quality, everyday essentials with seamless distribution and sales support.",
         href: "/services",
         cta: "Shop Now",
-        className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+        className: "col-span-1 row-span-1",
     },
     {
         Icon: BriefcaseIcon,
@@ -44,15 +43,14 @@ const features = [
         description: "Accelerate your business growth with professional insights, strategic planning, and industry-leading expertise.",
         href: "/services",
         cta: "Book a Consultation",
+        className: "col-span-1 row-span-1",
 
-        className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
     },
 ];
 
-
 export function Services() {
     return (
-        <BentoGrid className="lg:grid-rows-3">
+        <BentoGrid className="gap-4">
             {features.map((feature) => (
                 <BentoCard key={feature.name} {...feature} />
             ))}
